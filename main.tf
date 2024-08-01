@@ -1,18 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.0"
-    }
-  }
-
-  backend "s3" {
-    bucket         = "techstarter-tf-test"  
-    key            = "ec2-example/vpc.tfstate"
-    region         = "eu-central-1"
-  }
-}
-
 # Erstelle eine VPC
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
