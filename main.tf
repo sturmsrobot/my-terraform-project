@@ -1,4 +1,3 @@
-# main.tf
 terraform {
   required_providers {
     aws = {
@@ -8,14 +7,14 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "mein-terraform-state-bucket"  # Ersetzen Sie dies durch Ihren tatsächlichen S3-Bucket-Namen
-    key            = "terraform/state"
-    region         = "us-west-1"
+    bucket         = "techstarter-tf-test"  
+    key            = "ec2-example/vpc.tfstate"
+    region         = "eu-central-1"
   }
 }
 
 provider "aws" {
-  region = "us-west-1"
+  region = "eu-central-1"
 }
 
 # Erstelle eine VPC
