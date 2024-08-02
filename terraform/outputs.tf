@@ -1,3 +1,12 @@
+# Ausgabe der EC2-Instanz-Details
+output "instance_id" {
+  value = aws_instance.example.id
+}
+
+output "instance_public_ip" {
+  value = aws_instance.example.public_ip
+}
+
 # Outputs für die VPC
 output "vpc_id" {
   description = "Die ID der VPC"
